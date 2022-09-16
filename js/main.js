@@ -25,7 +25,7 @@ const swiperFeedback = new Swiper('.feedback__slider', {
             slidesPerView: 2,
         },
         1200: {
-            slidesPerView: 5,
+            slidesPerView: 3,
         },
     },
 });
