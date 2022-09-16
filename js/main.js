@@ -45,5 +45,28 @@ function updateTimer() {
     minBlock.innerHTML = min;
     secBlock.innerHTML = sec;
     time--;
+};
+
+const menuButton = document.querySelector('.header__main-links');
+const menu = document.querySelector('.header__main-links > ul');
+const menuLinks = document.querySelectorAll('.header__main-links > ul > li > a');
+const lineButton = document.querySelectorAll('.header__main-links > span');
+
+function closeAnimate() {
+    lineButton[0].classList.toggle('top');
+    lineButton[1].classList.toggle('middle');
+    lineButton[2].classList.toggle('bottom');
 }
+
+menuButton.addEventListener('click', (event) => {
+    menu.classList.toggle('menu-open');
+    closeAnimate();
+});
+menu.addEventListener('click', (event) => {
+    if(event.target = '.header__main-links > ul > li > a') {
+        menu.classList.toggle('menu-open'); 
+        event.stopPropagation();
+        closeAnimate();
+    }
+})
 

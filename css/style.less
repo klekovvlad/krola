@@ -41,6 +41,7 @@ body {
     overflow: hidden;
     .regular();
     color: @text;
+    position: relative;
 }
 a {
     color: @text;
@@ -817,6 +818,12 @@ h3 {
     }
     
     .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: #fff;
+        z-index: 10;
         &__top {
             display: none;
         }
@@ -825,12 +832,36 @@ h3 {
                 grid-template-columns: 250px 1fr;
             }
             &-links {
-                display: none;
+                margin-left: auto;
+                min-height: 24px;
+                width: 30px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                span {
+                    height: 2px;
+                    width: 100%;
+                    border-radius: 5px;
+                    background: #000;
+                }
                 ul {
+                    position: fixed;
+                    top: 90px;
+                    bottom: 0;
+                    right: 0;
+                    left: 0;
+                    background: #fff;
                     display: flex;
+                    flex-direction: column;
                     align-items: center;
-                    justify-content: space-between;
+                    justify-content: start;
                     min-height: 100%;
+                    z-index: 10;
+                    padding-top: 50px;
+                    transform: translateX(100%);
+                    opacity: 0;
+                    transition: all 0.5s linear;
                     li {
                         a {
                             display: flex;
@@ -838,8 +869,9 @@ h3 {
                             font-size: 18px;
                             .header();
                             color: @blue;
-                            min-height: 90px;
+                            min-height: 50px;
                             position: relative;
+                            min-width: 100%;
                         }
                         a:before {
                             content: '';
@@ -856,12 +888,41 @@ h3 {
                         }
                     }
                 }
+                .menu-open {
+                    transform: translateX(0%);
+                    opacity: 1.0;
+                }
+                .top {
+                    animation: top 0.5s linear forwards;
+                }
+                .middle {
+                    animation: middle 0.5s linear forwards;
+                }
+                .bottom {
+                    animation: bottom 0.5s linear forwards;
+                }
+                @keyframes top {
+                    to {
+                        transform: translateY(11px) rotate(45deg);
+                    }
+                }
+                @keyframes bottom {
+                    to {
+                        transform: translateY(-11px) rotate(-45deg);
+                    }
+                }
+                @keyframes middle {
+                    to {
+                        transform: translateX(200px);
+                    }
+                }
             }
         }
     }
     
     .main {
         max-width: 100%;
+        padding-top: 140px;
         &__wrapper {
             grid-template-columns: 1fr;
         }
