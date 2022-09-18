@@ -212,6 +212,7 @@ h3 {
             span {
                 margin-left: 30px;
                 text-transform: uppercase;
+                max-width: 300px;
             }
         }
     }
@@ -754,6 +755,126 @@ h3 {
     }
 }
 
+.care {
+    padding: 50px 0px;
+    background: @light;
+    overflow: hidden;
+    position: relative;
+    h3 {
+        max-width: 500px;
+    }
+    &__wrapper {
+        position: relative;
+        z-index: 2;
+    }
+    &__image {
+        min-height: 600px;
+        background: url(../img/carebg.png) no-repeat center;
+        background-size: 800px;
+        position: relative;
+        span {
+            padding: 5px;
+            border-radius: 10px;
+            color: #fff;
+            background: @blue;
+            position: absolute;
+        }
+        span:nth-child(1) {
+            top: 68%;
+            left: 35%;
+            transform: rotate(8deg);
+            font-size: 24px;
+        }
+        span:nth-child(2) {
+            top: 63%;
+            left: 65%;
+        }
+        span:nth-child(3) {
+            top: 50%;
+            left: 30%;
+        }
+        span:nth-child(4) {
+            top: 38%;
+            left: 58%;
+        }
+        span:nth-child(5) {
+            top: 39%;
+            left: 68%;
+        }
+        span:nth-child(6) {
+            top: 45%;
+            left: 75%;
+        }
+    }
+    &__toilet {
+        max-width: 250px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+    &__toilet:before {
+        content: 'Туалет';
+        position: absolute;
+        font-size: 1em;
+        color: #fff;
+        right: 10%;
+        bottom: 18%;
+        background: @blue;
+        padding: 5px;
+        border-radius: 10px;
+    }
+    &__other {
+        max-width: 600px;
+        position: relative;
+        bottom: -100px;
+        right: 0;
+        z-index: 3;
+        span {
+            padding: 5px;
+            border-radius: 10px;
+            color: #fff;
+            background: @blue;
+            position: absolute;
+        }
+        span:nth-child(2) {
+            top: 50%;
+            left: 10%;
+        }
+        span:nth-child(3) {
+            top: 50%;
+            left: 50%;
+        }
+        span:nth-child(4) {
+            top: 50%;
+            left: 80%;
+        }
+    }
+    &__top {
+        display: flex;
+    }
+    &__btn {
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 3;
+        span {
+            text-transform: uppercase;
+            margin-left: 20px;
+            max-width: 300px;
+            color: #fff;
+        }
+    }
+    .circle {
+        width: 100vw;
+        min-height: 800px;
+        background: @blue;
+        border-radius: 50%;
+        position: absolute;
+        bottom: -40%;
+        z-index: 1;
+    }
+}
+
 @media (max-width: 950px) {
     .container {
         max-width: none;
@@ -863,6 +984,111 @@ h3 {
             grid-template-columns: repeat(2, 1fr);
         }
     }
+
+    .care {
+        h3 {
+            max-width: none;
+            text-align: center;
+        }
+        &__image {
+            min-height: none;
+            background: url(../img/carebg.png) no-repeat center;
+            background-size: 100%;
+            position: relative;
+            span {
+                padding: 5px;
+                border-radius: 10px;
+                color: #fff;
+                background: @blue;
+                position: absolute;
+            }
+            span:nth-child(1) {
+                top: 68%;
+                left: 25%;
+                transform: rotate(8deg);
+                font-size: 24px;
+            }
+            span:nth-child(2) {
+                top: 63%;
+                left: 65%;
+            }
+            span:nth-child(3) {
+                top: 50%;
+                left: 30%;
+            }
+            span:nth-child(4) {
+                top: 38%;
+                left: 58%;
+            }
+            span:nth-child(5) {
+                top: 39%;
+                left: 68%;
+            }
+            span:nth-child(6) {
+                top: 45%;
+                left: 75%;
+            }
+        }
+        &__toilet {
+            max-width: 250px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+        &__other {
+            margin-top: 50px;
+            max-width: none;
+            position: relative;
+            bottom: 0px;
+            right: 0;
+            z-index: 3;
+            span {
+                padding: 5px;
+                border-radius: 10px;
+                color: #fff;
+                background: @blue;
+                position: absolute;
+            }
+            span:nth-child(2) {
+                top: 50%;
+                left: 10%;
+            }
+            span:nth-child(3) {
+                top: 50%;
+                left: 50%;
+            }
+            span:nth-child(4) {
+                top: 50%;
+                left: 80%;
+            }
+        }
+        &__top {
+            display: flex;
+            flex-direction: column;
+        }
+        &__btn {
+            display: flex;
+            align-items: center;
+            position: relative;
+            z-index: 3;
+            span {
+                text-transform: uppercase;
+                margin-left: 20px;
+                max-width: 300px;
+                color: #fff;
+            }
+        }
+        .circle {
+            width: 100vw;
+            min-height: 800px;
+            background: @blue;
+            border-radius: 50%;
+            position: absolute;
+            bottom: -40%;
+            z-index: 1;
+        }
+    }
+
 }
 
 @media (max-width: 600px) {
@@ -1029,14 +1255,16 @@ h3 {
             }
             &-btn {
                 flex-direction: column;
-                align-items: center;
-                justify-content: center;
+                align-items: flex-start;
+                justify-content: flex-start;
                 margin-bottom: 10px;
                 span {
-                    margin-left: 0px;
+                    max-width: none;
                     margin-top: 20px;
+                    margin-left: auto;
                     text-transform: uppercase;
-                    text-align: center;
+                    display: block;
+                    text-align: right;
                 }
             }
         }
@@ -1306,6 +1534,88 @@ h3 {
                     max-width: 100%;
                 }
             }
+        }
+    }
+    .care {
+        h3 {
+            max-width: none;
+            text-align: center;
+        }
+        &__image {
+            min-height: 300px;
+            span {
+                text-align: center;
+                font-size: 14px;
+            }
+            span:nth-child(1) {
+                top: 68%;
+                left: 15%;
+                transform: rotate(8deg);
+                font-size: 18px;
+            }
+            span:nth-child(2) {
+                top: 60%;
+                left: 63%;
+            }
+            span:nth-child(3) {
+                top: 50%;
+                left: 20%;
+            }
+            span:nth-child(4) {
+                top: 35%;
+                left: 58%;
+            }
+            span:nth-child(5) {
+                top: 45%;
+                left: 60%;
+            }
+            span:nth-child(6) {
+                top: 45%;
+                left: 75%;
+            }
+        }
+        &__toilet {
+            max-width: 200px;
+            position: relative;
+            margin: 0px auto;
+        }
+        &__other {
+            margin-top: 30px;
+            span {
+                font-size: 14px;
+                text-align: center;
+            }
+            span:nth-child(2) {
+                left: 5%;
+            }
+            span:nth-child(3) {
+                left: 45%;
+            }
+            span:nth-child(4) {
+                left: 75%;
+            }
+        }
+        &__btn {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: start;
+            span {
+                margin-top: 20px;
+                margin-left: 0px;
+                max-width: 300px;
+            }
+        }
+        .circle {
+            width: 500px;
+            min-height: 500px;
+            background: @blue;
+            border-radius: 50%;
+            position: absolute;
+            bottom: -200px;
+            z-index: 1;
+            left: 50%;
+            transform: translateX(-50%);
         }
     }
 }

@@ -345,6 +345,7 @@ h3__main-links ul li a:hover:before {
 .main__text-btn span {
   margin-left: 30px;
   text-transform: uppercase;
+  max-width: 300px;
 }
 .main__image {
   display: grid;
@@ -1403,6 +1404,125 @@ h3__main-links ul li a:hover:before {
   display: block;
   margin-bottom: 10px;
 }
+.care {
+  padding: 50px 0px;
+  background: #e7e6e1;
+  overflow: hidden;
+  position: relative;
+}
+.care h3 {
+  max-width: 500px;
+}
+.care__wrapper {
+  position: relative;
+  z-index: 2;
+}
+.care__image {
+  min-height: 600px;
+  background: url(../img/carebg.png) no-repeat center;
+  background-size: 800px;
+  position: relative;
+}
+.care__image span {
+  padding: 5px;
+  border-radius: 10px;
+  color: #fff;
+  background: #314e52;
+  position: absolute;
+}
+.care__image span:nth-child(1) {
+  top: 68%;
+  left: 35%;
+  transform: rotate(8deg);
+  font-size: 24px;
+}
+.care__image span:nth-child(2) {
+  top: 63%;
+  left: 65%;
+}
+.care__image span:nth-child(3) {
+  top: 50%;
+  left: 30%;
+}
+.care__image span:nth-child(4) {
+  top: 38%;
+  left: 58%;
+}
+.care__image span:nth-child(5) {
+  top: 39%;
+  left: 68%;
+}
+.care__image span:nth-child(6) {
+  top: 45%;
+  left: 75%;
+}
+.care__toilet {
+  max-width: 250px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.care__toilet:before {
+  content: 'Туалет';
+  position: absolute;
+  font-size: 1em;
+  color: #fff;
+  right: 10%;
+  bottom: 18%;
+  background: #314e52;
+  padding: 5px;
+  border-radius: 10px;
+}
+.care__other {
+  max-width: 600px;
+  position: relative;
+  bottom: -100px;
+  right: 0;
+  z-index: 3;
+}
+.care__other span {
+  padding: 5px;
+  border-radius: 10px;
+  color: #fff;
+  background: #314e52;
+  position: absolute;
+}
+.care__other span:nth-child(2) {
+  top: 50%;
+  left: 10%;
+}
+.care__other span:nth-child(3) {
+  top: 50%;
+  left: 50%;
+}
+.care__other span:nth-child(4) {
+  top: 50%;
+  left: 80%;
+}
+.care__top {
+  display: flex;
+}
+.care__btn {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 3;
+}
+.care__btn span {
+  text-transform: uppercase;
+  margin-left: 20px;
+  max-width: 300px;
+  color: #fff;
+}
+.care .circle {
+  width: 100vw;
+  min-height: 800px;
+  background: #314e52;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -40%;
+  z-index: 1;
+}
 @media (max-width: 950px) {
   .container {
     max-width: none;
@@ -1475,6 +1595,107 @@ h3__main-links ul li a:hover:before {
   }
   .footer__wrapper {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .care h3 {
+    max-width: none;
+    text-align: center;
+  }
+  .care__image {
+    min-height: none;
+    background: url(../img/carebg.png) no-repeat center;
+    background-size: 100%;
+    position: relative;
+  }
+  .care__image span {
+    padding: 5px;
+    border-radius: 10px;
+    color: #fff;
+    background: #314e52;
+    position: absolute;
+  }
+  .care__image span:nth-child(1) {
+    top: 68%;
+    left: 25%;
+    transform: rotate(8deg);
+    font-size: 24px;
+  }
+  .care__image span:nth-child(2) {
+    top: 63%;
+    left: 65%;
+  }
+  .care__image span:nth-child(3) {
+    top: 50%;
+    left: 30%;
+  }
+  .care__image span:nth-child(4) {
+    top: 38%;
+    left: 58%;
+  }
+  .care__image span:nth-child(5) {
+    top: 39%;
+    left: 68%;
+  }
+  .care__image span:nth-child(6) {
+    top: 45%;
+    left: 75%;
+  }
+  .care__toilet {
+    max-width: 250px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  .care__other {
+    margin-top: 50px;
+    max-width: none;
+    position: relative;
+    bottom: 0px;
+    right: 0;
+    z-index: 3;
+  }
+  .care__other span {
+    padding: 5px;
+    border-radius: 10px;
+    color: #fff;
+    background: #314e52;
+    position: absolute;
+  }
+  .care__other span:nth-child(2) {
+    top: 50%;
+    left: 10%;
+  }
+  .care__other span:nth-child(3) {
+    top: 50%;
+    left: 50%;
+  }
+  .care__other span:nth-child(4) {
+    top: 50%;
+    left: 80%;
+  }
+  .care__top {
+    display: flex;
+    flex-direction: column;
+  }
+  .care__btn {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 3;
+  }
+  .care__btn span {
+    text-transform: uppercase;
+    margin-left: 20px;
+    max-width: 300px;
+    color: #fff;
+  }
+  .care .circle {
+    width: 100vw;
+    min-height: 800px;
+    background: #314e52;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -40%;
+    z-index: 1;
   }
 }
 @media (max-width: 600px) {
@@ -1703,15 +1924,17 @@ h3__main-links ul li a:hover:before {
   }
   .main__text-btn {
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
     margin-bottom: 10px;
   }
   .main__text-btn span {
-    margin-left: 0px;
+    max-width: none;
     margin-top: 20px;
+    margin-left: auto;
     text-transform: uppercase;
-    text-align: center;
+    display: block;
+    text-align: right;
   }
   .main__image {
     grid-template-columns: 1fr;
@@ -1952,5 +2175,85 @@ h3__main-links ul li a:hover:before {
     margin-top: 20px;
     min-width: 100%;
     max-width: 100%;
+  }
+  .care h3 {
+    max-width: none;
+    text-align: center;
+  }
+  .care__image {
+    min-height: 300px;
+  }
+  .care__image span {
+    text-align: center;
+    font-size: 14px;
+  }
+  .care__image span:nth-child(1) {
+    top: 68%;
+    left: 15%;
+    transform: rotate(8deg);
+    font-size: 18px;
+  }
+  .care__image span:nth-child(2) {
+    top: 60%;
+    left: 63%;
+  }
+  .care__image span:nth-child(3) {
+    top: 50%;
+    left: 20%;
+  }
+  .care__image span:nth-child(4) {
+    top: 35%;
+    left: 58%;
+  }
+  .care__image span:nth-child(5) {
+    top: 45%;
+    left: 60%;
+  }
+  .care__image span:nth-child(6) {
+    top: 45%;
+    left: 75%;
+  }
+  .care__toilet {
+    max-width: 200px;
+    position: relative;
+    margin: 0px auto;
+  }
+  .care__other {
+    margin-top: 30px;
+  }
+  .care__other span {
+    font-size: 14px;
+    text-align: center;
+  }
+  .care__other span:nth-child(2) {
+    left: 5%;
+  }
+  .care__other span:nth-child(3) {
+    left: 45%;
+  }
+  .care__other span:nth-child(4) {
+    left: 75%;
+  }
+  .care__btn {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+  }
+  .care__btn span {
+    margin-top: 20px;
+    margin-left: 0px;
+    max-width: 300px;
+  }
+  .care .circle {
+    width: 500px;
+    min-height: 500px;
+    background: #314e52;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -200px;
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
