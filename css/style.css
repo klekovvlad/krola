@@ -358,7 +358,7 @@ h3__main-links ul li a:hover:before {
   grid-column-start: span 2;
 }
 .main__image-box:nth-child(3) {
-  background: url(../img/timer.png) no-repeat left top;
+  background: url(../img/timer.webp) no-repeat left top;
   background-size: 150px 150px;
 }
 .main__image .timer {
@@ -778,7 +778,7 @@ h3__main-links ul li a:hover:before {
 }
 .why {
   padding: 50px 0px;
-  background: url(../img/whybg.png) no-repeat center;
+  background: url(../img/whybg.webp) no-repeat center;
   background-size: cover;
   text-align: center;
   position: relative;
@@ -1419,7 +1419,7 @@ h3__main-links ul li a:hover:before {
 }
 .care__image {
   min-height: 600px;
-  background: url(../img/carebg.png) no-repeat center;
+  background: url(../img/carebg.webp) no-repeat center;
   background-size: 800px;
   position: relative;
 }
@@ -1548,7 +1548,7 @@ h3__main-links ul li a:hover:before {
     margin: 0px auto;
   }
   .main__image-box:nth-child(3) {
-    background: url(../img/timer.png) no-repeat left top;
+    background: url(../img/timer.webp) no-repeat left top;
     background-size: 200px 200px;
     display: flex;
     justify-content: flex-end;
@@ -1602,7 +1602,7 @@ h3__main-links ul li a:hover:before {
   }
   .care__image {
     min-height: none;
-    background: url(../img/carebg.png) no-repeat center;
+    background: url(../img/carebg.webp) no-repeat center;
     background-size: 100%;
     position: relative;
   }
@@ -1952,7 +1952,7 @@ h3__main-links ul li a:hover:before {
     grid-row-start: 1;
     max-width: 100%;
     min-height: 250px;
-    background: url(../img/timer.png) no-repeat left center;
+    background: url(../img/timer.webp) no-repeat left center;
     background-size: 150px 150px;
     display: flex;
     justify-content: center;
